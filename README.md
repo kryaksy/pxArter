@@ -16,3 +16,4 @@ Users should be able to:
     -  resize table
     -  change color
     -  change brush size
+ 6. Color Rules Guider
