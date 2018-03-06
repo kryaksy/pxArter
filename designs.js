@@ -1,4 +1,5 @@
 // Select color input
+var colorPick = document.getElementById('colorPicker')
 
 // Select size input
 
@@ -11,15 +12,15 @@ function makeGrid(x,y) {
   for (var i = 0; i < x; i++) {
     var row = document.createElement("tr");
     for (var j = 0; j < y; j++) {
-      var col = document.createElement("td");
-      row.appendChild(col);
+      var cell = document.createElement("td");
+      row.appendChild(cell);
     }
     pxCanvas.appendChild(row);
   }
 }
 
 function makePx(e) {
-	var colorInput = document.getElementById('colorPicker').value;
+	var colorInput = colorPick.value;
 	e.target.style.backgroundColor = colorInput;
 }
 
