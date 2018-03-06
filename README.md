@@ -8,7 +8,11 @@ Users should be able to:
   3. Click a cell in the grid to fill that cell with the chosen color.
 
 ## Future
- 1. Keyboard shortcuts to
+ 1. Continuous drawing
+ 2. Continuous eraser
+ 3. Cleaner
+ 4. Brush size
+ 5. Keyboard shortcuts to
     -  resize table
     -  change color
     -  change brush size
