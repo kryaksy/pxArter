@@ -5,6 +5,13 @@ var color = document.querySelector('#colorPicker').value;
 var N = document.querySelector('#inputHeight');
 var M = document.querySelector('#inputWeight');
 
+// Select Elements
+const pxCanvas = document.querySelector('#pxCanvas');
+
+// Create Elements
+const newTR = document.createElement('tr');
+const newTD = document.createElement('td');
+
 // When size is submitted by the user, call makeGrid()
 document.querySelector('#sizePicker').addEventListener('submit', function(e) {
 	e.preventDefault();
