@@ -6,7 +6,7 @@ var N = document.querySelector('#inputHeight');
 var M = document.querySelector('#inputWidth');
 
 // Select Elements
-const pxCanvas = document.querySelector('#pxCanvas');
+const pxCanvas = document.querySelector('#pixelCanvas');
 
 // Create Elements
 const newTR = document.createElement('tr');
