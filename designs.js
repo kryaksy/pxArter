@@ -9,11 +9,13 @@ var M = document.querySelector('#inputWeight').value;
 document.querySelector('#sizePicker').addEventListener('submit', function(e) {
 	e.preventDefault();
 	makeGrid();
+	console.log('submit listener works!');
 });
 
 function makeGrid() {
 
-// Your code goes here!
+	// Your code goes here!
+	console.log('makeGrid() works!');
 
 }
 
