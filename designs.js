@@ -1,12 +1,15 @@
 // Select color input
-var pxColor = document.querySelector('#colorPicker').value;
+var pxColor = document.querySelector('#colorPicker');
+
 
 // Select size input
 var N = document.querySelector('#inputHeight');
 var M = document.querySelector('#inputWidth');
 
+
 // Select Elements
 const pxCanvas = document.querySelector('#pixelCanvas');
+
 
 // When size is submitted by the user, call makeGrid()
 document.querySelector('#sizePicker').addEventListener('submit', function(e) {
@@ -16,8 +19,29 @@ document.querySelector('#sizePicker').addEventListener('submit', function(e) {
 
 });
 
-// When cell is clicked by the user, call makePx()
-document.querySelector('#pixelCanvas').addEventListener('click', makePx);
+
+// Continuous Drawing
+let mouseIsDown = false;
+
+document.querySelector('#pixelCanvas').addEventListener('mousemove', function (e) {
+
+  if (mouseIsDown) {
+		makePx(e);
+	}
+
+});
+
+document.querySelector('#pixelCanvas').addEventListener('mousedown', function () {
+
+	mouseIsDown = true;
+
+});
+
+document.querySelector('#pixelCanvas').addEventListener('mouseup', function () {
+
+  mouseIsDown = false;
+
+});
 
 // FUNCTIONS
 function makeGrid() {
@@ -39,5 +63,7 @@ function makeGrid() {
 }
 
 function makePx(e) {
-	e.target.style.backgroundColor = pxColor;
+
+	e.target.style.backgroundColor = pxColor.value;
+
 }

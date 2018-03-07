@@ -7,7 +7,7 @@ Users should be able to:
   2. Choose a color.
   3. Click a cell in the grid to fill that cell with the chosen color.
 
-## Future
+## Goals
  1. Continuous drawing
  2. Continuous eraser
  3. Cleaner
