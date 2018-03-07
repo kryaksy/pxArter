@@ -19,7 +19,10 @@ function makeGrid() {
 	// Your code goes here!
 	for (var i = 0; i < N.value; i++) {
 		for (var j = 0; j < M.value; j++) {
-			
+
+			// TEST
+			console.log(i,j);
+
 		}
 	}
 	// TEST
