@@ -2,10 +2,15 @@
 var colorPick = document.getElementById('colorPicker')
 
 // Select size input
+const getHeight = document.getElementById('inputHeight');
+const getWeight = document.getElementById('inputWeight');
+
 
 //
 // Functions
 //
+
+//Make Grid Function
 function makeGrid(x,y) {
 	const pxCanvas = document.querySelector('#pixelCanvas');
 	pxCanvas.innerHTML = "";
@@ -19,23 +24,26 @@ function makeGrid(x,y) {
   }
 }
 
+//Make Pixel Function
 function makePx(e) {
 	var colorInput = colorPick.value;
 	e.target.style.backgroundColor = colorInput;
 }
 
+
 //
 // Listeners
 //
-document.querySelector('#sizePicker').addEventListener('submit', function(e){
+
+//Submit Listener
+document.querySelector('#sizePicker').addEventListener('submit', function(e) {
   e.preventDefault();
-	const N = document.getElementById('inputHeight').value;
-	const M = document.getElementById('inputWeight').value;
+  var N = getHeight.value;
+  var M = getWeight.value;
   makeGrid(N,M);
 });
 
+//Make Pixel Listener
 document.querySelector('#pixelCanvas').addEventListener('click', function (e) {
 	makePx(e);
 });
-
-// TODO: Color Listener
