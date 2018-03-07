@@ -1,13 +1,12 @@
 body {
     text-align: center;
-    color: #1b01b0;
 }
 
 h1 {
     font-family: Monoton;
     font-size: 60px;
     margin: 0.2em;
-    color: #333;
+    color: #1b01b0;
 }
 
 h2 {
@@ -15,9 +14,8 @@ h2 {
 }
 
 h2:first-of-type {
-    margin-top: 1.5em;
+    margin-top: 0.5em;
 }
-
 
 table,
 tr,
