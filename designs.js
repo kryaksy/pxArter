@@ -1,5 +1,5 @@
 // Select color input
-var color = document.querySelector('#colorPicker').value;
+var pxColor = document.querySelector('#colorPicker').value;
 
 // Select size input
 var N = document.querySelector('#inputHeight');
@@ -16,6 +16,10 @@ document.querySelector('#sizePicker').addEventListener('submit', function(e) {
 
 });
 
+// When cell is clicked by the user, call makePx()
+document.querySelector('#pixelCanvas').addEventListener('click', makePx);
+
+// FUNCTIONS
 function makeGrid() {
 
 	pxCanvas.innerHTML = "";
@@ -32,4 +36,8 @@ function makeGrid() {
 
 	}
 
+}
+
+function makePx(e) {
+	e.target.style.backgroundColor = pxColor;
 }
