@@ -3,7 +3,7 @@ var color = document.querySelector('#colorPicker').value;
 
 // Select size input
 var N = document.querySelector('#inputHeight');
-var M = document.querySelector('#inputWeight');
+var M = document.querySelector('#inputWidth');
 
 // Select Elements
 const pxCanvas = document.querySelector('#pxCanvas');
