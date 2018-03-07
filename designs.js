@@ -21,12 +21,15 @@ document.querySelector('#sizePicker').addEventListener('submit', function(e) {
 
 
 // Continuous Drawing
+
 let mouseIsDown = false;
 
 document.querySelector('#pixelCanvas').addEventListener('mousemove', function (e) {
 
   if (mouseIsDown) {
+
 		makePx(e);
+
 	}
 
 });
@@ -43,7 +46,8 @@ document.querySelector('#pixelCanvas').addEventListener('mouseup', function () {
 
 });
 
-// FUNCTIONS
+
+// Make Grid
 function makeGrid() {
 
 	pxCanvas.innerHTML = "";
@@ -62,6 +66,8 @@ function makeGrid() {
 
 }
 
+
+// Make Pixel
 function makePx(e) {
 
 	e.target.style.backgroundColor = pxColor.value;
