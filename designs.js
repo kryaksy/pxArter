@@ -1,49 +1,43 @@
 // Select color input
-var colorPick = document.getElementById('colorPicker')
+var pxColor = document.querySelector('#colorPicker').value;
 
 // Select size input
-const getHeight = document.getElementById('inputHeight');
-const getWeight = document.getElementById('inputWeight');
+var N = document.querySelector('#inputHeight');
+var M = document.querySelector('#inputWidth');
 
+// Select Elements
+const pxCanvas = document.querySelector('#pixelCanvas');
 
-//
-// Functions
-//
-
-//Make Grid Function
-function makeGrid(x,y) {
-	const pxCanvas = document.querySelector('#pixelCanvas');
-	pxCanvas.innerHTML = "";
-  for (var i = 0; i < x; i++) {
-    var row = document.createElement("tr");
-    for (var j = 0; j < y; j++) {
-      var cell = document.createElement("td");
-      row.appendChild(cell);
-    }
-    pxCanvas.appendChild(row);
-  }
-}
-
-//Make Pixel Function
-function makePx(e) {
-	var colorInput = colorPick.value;
-	e.target.style.backgroundColor = colorInput;
-}
-
-
-//
-// Listeners
-//
-
-//Submit Listener
+// When size is submitted by the user, call makeGrid()
 document.querySelector('#sizePicker').addEventListener('submit', function(e) {
-  e.preventDefault();
-  var N = getHeight.value;
-  var M = getWeight.value;
-  makeGrid(N,M);
+
+	e.preventDefault();
+	makeGrid();
+
 });
 
-//Make Pixel Listener
-document.querySelector('#pixelCanvas').addEventListener('click', function (e) {
-	makePx(e);
-});
+// When cell is clicked by the user, call makePx()
+document.querySelector('#pixelCanvas').addEventListener('click', makePx);
+
+// FUNCTIONS
+function makeGrid() {
+
+	pxCanvas.innerHTML = "";
+	for (var i = 0; i < N.value; i++) {
+
+		let newTR = document.createElement('tr');
+		pxCanvas.appendChild(newTR);
+		for (var j = 0; j < M.value; j++) {
+
+			let newTD = document.createElement('td');
+			pxCanvas.getElementsByTagName('tr')[i].appendChild(newTD);
+
+		}
+
+	}
+
+}
+
+function makePx(e) {
+	e.target.style.backgroundColor = pxColor;
+}
