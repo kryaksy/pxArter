@@ -2,7 +2,7 @@
 
 _pxArter_ is a Pixel Art Maker project as Udacity Front End Web Nanodegree exercise material
 
-Check out stable version: [pxArter2](https://kryaksy.github.io/pxArter)
+Stable version: [pxArter2](https://kryaksy.github.io/pxArter)
 
 ## Main Features
 
@@ -26,11 +26,7 @@ Users should be able to:
 
 - Continuous eraser
 - Cleaner
+- Keyboard shortcuts
 - Brush size
 - Canvas resizing
-- Keyboard shortcuts to
-
-  - resize table
-  - change brush size
-
 - Color Rules Guider
