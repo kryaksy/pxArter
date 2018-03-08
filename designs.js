@@ -13,25 +13,27 @@ const body = document.querySelector('body');
 document.querySelector('#sizePicker').addEventListener('submit', function(e) {
 	e.preventDefault();
 	makeGrid();
+	drawPx();
 });
 
 // Continuous Drawing
+function drawPx() {
+	let mouseIsDown = false;
 
-let mouseIsDown = false;
+	document.querySelector('#pixelCanvas').addEventListener('mousemove', function (e) {
+	  if (mouseIsDown) {
+			makePx(e);
+		}
+	});
 
-document.querySelector('#pixelCanvas').addEventListener('mousemove', function (e) {
-  if (mouseIsDown) {
-		makePx(e);
-	}
-});
+	document.querySelector('#pixelCanvas').addEventListener('mousedown', function () {
+		mouseIsDown = true;
+	});
 
-document.querySelector('#pixelCanvas').addEventListener('mousedown', function () {
-	mouseIsDown = true;
-});
-
-document.querySelector('#pixelCanvas').addEventListener('mouseup', function () {
-  mouseIsDown = false;
-});
+	document.querySelector('#pixelCanvas').addEventListener('mouseup', function () {
+	  mouseIsDown = false;
+	});
+}
 
 // Make Grid
 function makeGrid() {
@@ -52,7 +54,6 @@ function makeGrid() {
 			pxCanvas.getElementsByTagName('tr')[i].appendChild(newTD);
 		}
 	}
-	body.style.backgroundColor = pxColor.value/10;
 }
 
 // Make Pixel
