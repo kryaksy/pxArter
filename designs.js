@@ -26,6 +26,10 @@ function drawPx() {
 		mouseIsDown && makePx(e);
 	});
 
+	document.querySelector('#pixelCanvas').addEventListener('click', function(e) {
+		makePx(e);
+	});
+
 	document.querySelector('#pixelCanvas').addEventListener('mousedown', function() {
 		mouseIsDown = true;
 	});
