@@ -1,19 +1,32 @@
-# pxArter
- *pxArter* is a Pixel Art Maker project as Udacity Front End Web Nanodegree exercise material
+# pxArter2
 
-## Features
+_pxArter_ is a Pixel Art Maker project as Udacity Front End Web Nanodegree exercise material
+
+Stable version: [pxArter2](https://kryaksy.github.io/pxArter)
+
+## Main Features
+
 Users should be able to:
-  1. Dynamically set the size of the table as an N by M grid.
-  2. Choose a color.
-  3. Click a cell in the grid to fill that cell with the chosen color.
 
-## Future
- 1. Continuous drawing
- 2. Continuous eraser
- 3. Cleaner
- 4. Brush size
- 5. Keyboard shortcuts to
-    -  resize table
-    -  change color
-    -  change brush size
- 6. Color Rules Guider
+1. Dynamically set the size of the table as an N by M grid.
+2. Choose a color.
+3. Click a cell in the grid to fill that cell with the chosen color.
+
+## Additional Features
+
+- Continuous Drawing
+- Square pixels
+- Grid disappears while drawing
+
+## Issues
+
+- One click draw
+
+## Goals
+
+- Continuous eraser
+- Cleaner
+- Keyboard shortcuts
+- Brush size
+- Canvas resizing
+- Color Rules Guider
