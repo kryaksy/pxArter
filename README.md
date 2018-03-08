@@ -1,6 +1,8 @@
-# pxArter
+# pxArter2
 
 _pxArter_ is a Pixel Art Maker project as Udacity Front End Web Nanodegree exercise material
+
+Check out stable version: [pxArter2](https://kryaksy.github.io/pxArter)
 
 ## Main Features
 
