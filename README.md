@@ -9,10 +9,10 @@ Users should be able to:
 
 ## Additional Features
  - Continuous Drawing
+ - Need square pixels
 
 ## Issues
  - One click draw
- - Need square pixels
 
 ## Goals
  - Continuous eraser

@@ -1,33 +1,91 @@
 body {
-    text-align: center;
+    background-color: #ddd;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding-top: 2em;
+    padding: 0 1em;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: flex-end;
+    background-color: yellow;
 }
 
 h1 {
+    margin: 0;
+    padding: 0;
     font-family: Monoton;
-    font-size: 60px;
-    margin: 0.2em;
+    font-size: 40px;
     color: #1b01b0;
+    weight: 100;
+    text-align: center;
 }
+
+h1.title {
+}
+
+container.sizeSet {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+}
+
+#sizePicker {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.set-size{}
+
+.set-color{}
 
 h2 {
-    margin: 1em 0 0.25em;
+  height: 50px;
+  text-align: center;
 }
 
-h2:first-of-type {
-    margin-top: 0.5em;
-}
-
-table,
-tr,
-td {
-    border: 1px solid black;
-}
-
-table {
+#pixelCanvas {
     border-collapse: collapse;
-    margin: 0 auto;
+    background-color: #ddd;
+    cursor: crosshair;
+}
+
+#pixelCanvas h2 {
+    top: 250px;
+    color: #fff;
+}
+
+#pixelCanvas > tr > td {
+    border: 0.1rem solid #fff;
+    background-color: #aaa;
+
 }
 
 input[type=number] {
     width: 6em;
+    margin: 0.1em;
+    text-align: center;
+}
+
+input[type=submit] {
+    width: 13em;
+    margin: 0.5em;
+    text-align: center;
+}
+
+input[type=color] {
+  margin: 5px;
+  height: 45px;
+  border-width: 0px;
+  background-color: #666;
+}
+
+.colorSet {
+  position: fixed;
+  height: 100vh;
+  background-color: #666;
 }

@@ -1,22 +1,18 @@
 // Select color input
 var pxColor = document.querySelector('#colorPicker');
 
-
 // Select size input
 var canvasHeight = document.querySelector('#inputHeight');
 var canvasWidth = document.querySelector('#inputWidth');
 
-
 // Select Elements
 const pxCanvas = document.querySelector('#pixelCanvas');
-
 
 // When size is submitted by the user, call makeGrid()
 document.querySelector('#sizePicker').addEventListener('submit', function(e) {
 	e.preventDefault();
 	makeGrid();
 });
-
 
 // Continuous Drawing
 
@@ -36,19 +32,18 @@ document.querySelector('#pixelCanvas').addEventListener('mouseup', function () {
   mouseIsDown = false;
 });
 
-
 // Make Grid
 function makeGrid() {
 	const N = canvasHeight.value;
 	const M = canvasWidth.value;
-	var cellSize = Math.floor(window.innerWidth / M)
+	var cellSize = Math.floor(window.innerWidth / M);
 	pxCanvas.innerHTML = "";
 
 	for (var i = 0; i < N; i++) {
 		let newTR = document.createElement('tr');
 		pxCanvas.appendChild(newTR);
-		for (var j = 0; j < M; j++) {
 
+		for (var j = 0; j < M; j++) {
 			let newTD = document.createElement('td');
 			window.td = newTD;
 			newTD.style.height = cellSize + "px";
@@ -56,16 +51,9 @@ function makeGrid() {
 			pxCanvas.getElementsByTagName('tr')[i].appendChild(newTD);
 		}
 	}
-
-
-	// pxCanvas.getElementsByTagName('tr').style.width = cellSize;
-	// pxCanvas.getElementsByTagName('td').style.height = cellSize;
 }
-
 
 // Make Pixel
 function makePx(e) {
-
 	e.target.style.backgroundColor = pxColor.value;
-
 }
