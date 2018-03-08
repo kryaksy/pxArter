@@ -10,6 +10,7 @@ const pxCanvas = document.querySelector('#pixelCanvas');
 const body = document.querySelector('body');
 const header = document.querySelector('header');
 const h1 = document.querySelector('h1');
+const bar = document.querySelector('#myBar');
 
 // When size is submitted by the user, call makeGrid()
 document.querySelector('#sizePicker').addEventListener('submit', function(e) {
@@ -44,9 +45,11 @@ function makeGrid() {
 	pxCanvas.innerHTML = "";
 
 	for (var i = 0; i < N; i++) {
+
 		let newTR = document.createElement('tr');
-		let load = Math.floor(i / (N - 1) * 100);
+		let load = Math.floor((i + 1) / N * 100);
 		pxCanvas.appendChild(newTR);
+
 		for (var j = 0; j < M; j++) {
 			let newTD = document.createElement('td');
 			window.td = newTD;
@@ -54,11 +57,11 @@ function makeGrid() {
 			newTD.style.width = cellSize + "px";
 			pxCanvas.getElementsByTagName('tr')[i].appendChild(newTD);
 		}
-		console.log('%' + load);
+		console.log(load);
 	}
-	console.log('done');
 	body.style.paddingTop = '0';
 	h1.style.color = pxColor.value;
+	console.log('makeGrid done');
 }
 
 // Make Pixel
