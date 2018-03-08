@@ -1,34 +1,31 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>pxArter</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-      <h1 class="title">pxArter2</h1>
-      <container class="sizeSet">
-        <form id="sizePicker">
-            <container>
-              H:
-              <input type="number" id="inputHeight" name="height" min="1" placeholder="Height" value="40">
-              W:
-              <input type="number" id="inputWidth" name="width" min="1" placeholder="Width" value="100">
-            </container>
-            <input type="submit" value="Create Grid">
-        </form>
-      </container>
-      <input type="color" id="colorPicker" value="#1b01b0">
-    </header>
 
-    <container class="canvasHead">
-      <!-- <h2>Design Canvas</h2> -->
-    </container>
-    <table id="pixelCanvas">
-      <!-- <h2>Create New Grid</h2> -->
-    </table>
+	<head>
+		<title>pxArter</title>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monoton">
+		<link rel="stylesheet" href="styles.css">
+	</head>
 
-    <script src="designs.js"></script>
-</body>
+	<body>
+
+		<header>
+			<h1 class="title">pxArter2</h1>
+			<container class="sizeSet">
+				<form id="sizePicker">
+					<container>
+						H:
+						<input type="number" id="inputHeight" name="height" min="1" placeholder="Height" value="40"> W:
+						<input type="number" id="inputWidth" name="width" min="1" placeholder="Width" value="100">
+					</container>
+					<input type="submit" value="Create Grid">
+				</form>
+			</container>
+			<input type="color" id="colorPicker" value="#1b01b0">
+		</header>
+		<table id="pixelCanvas"></table>
+
+		<script src="designs.js"></script>
+	</body>
+
 </html>

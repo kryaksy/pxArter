@@ -20,18 +20,16 @@ document.querySelector('#sizePicker').addEventListener('submit', function(e) {
 function drawPx() {
 	let mouseIsDown = false;
 
-	document.querySelector('#pixelCanvas').addEventListener('mousemove', function (e) {
-	  if (mouseIsDown) {
-			makePx(e);
-		}
+	document.querySelector('#pixelCanvas').addEventListener('mousemove', function(e) {
+		mouseIsDown && makePx(e);
 	});
 
-	document.querySelector('#pixelCanvas').addEventListener('mousedown', function () {
+	document.querySelector('#pixelCanvas').addEventListener('mousedown', function() {
 		mouseIsDown = true;
 	});
 
-	document.querySelector('#pixelCanvas').addEventListener('mouseup', function () {
-	  mouseIsDown = false;
+	document.querySelector('#pixelCanvas').addEventListener('mouseup', function() {
+		mouseIsDown = false;
 	});
 }
 
@@ -40,12 +38,12 @@ function makeGrid() {
 	const N = canvasHeight.value;
 	const M = canvasWidth.value;
 	var cellSize = Math.floor(window.innerWidth / M);
+
 	pxCanvas.innerHTML = "";
 
 	for (var i = 0; i < N; i++) {
 		let newTR = document.createElement('tr');
 		pxCanvas.appendChild(newTR);
-
 		for (var j = 0; j < M; j++) {
 			let newTD = document.createElement('td');
 			window.td = newTD;
@@ -59,4 +57,5 @@ function makeGrid() {
 // Make Pixel
 function makePx(e) {
 	e.target.style.backgroundColor = pxColor.value;
+	e.target.style.border = "1px dotted" + pxColor.value;
 }
