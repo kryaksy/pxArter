@@ -6,23 +6,27 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>pxArter</h1>
+    <header>
+      <h1 class="title">pxArter2</h1>
+      <container class="sizeSet">
+        <form id="sizePicker">
+            <container>
+              H:
+              <input type="number" id="inputHeight" name="height" min="1" placeholder="Height" value="40">
+              W:
+              <input type="number" id="inputWidth" name="width" min="1" placeholder="Width" value="100">
+            </container>
+            <input type="submit" value="Create Grid">
+        </form>
+      </container>
+      <input type="color" id="colorPicker" value="#1b01b0">
+    </header>
 
-    <h2>Choose Grid Size</h2>
-    <form id="sizePicker">
-        Grid Height:
-        <input type="number" id="inputHeight" name="height" min="1" value="1">
-        Grid Width:
-        <input type="number" id="inputWidth" name="width" min="1" value="1">
-        <input type="submit">
-    </form>
-
-    <h2>Pick A Color</h2>
-    <input type="color" id="colorPicker" value="#1b01b0">
-
-    <h2>Design Canvas</h2>
+    <container class="canvasHead">
+      <!-- <h2>Design Canvas</h2> -->
+    </container>
     <table id="pixelCanvas">
-      <!-- tr*10>td*10 -->
+      <!-- <h2>Create New Grid</h2> -->
     </table>
 
     <script src="designs.js"></script>
