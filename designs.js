@@ -1,5 +1,5 @@
 // Select color input
-var pxColor = document.querySelector('#colorPicker');
+const pxColor = document.querySelector('#colorPicker');
 
 // Select size input
 var canvasHeight = document.querySelector('#inputHeight');
@@ -7,6 +7,7 @@ var canvasWidth = document.querySelector('#inputWidth');
 
 // Select Elements
 const pxCanvas = document.querySelector('#pixelCanvas');
+const body = document.querySelector('body');
 
 // When size is submitted by the user, call makeGrid()
 document.querySelector('#sizePicker').addEventListener('submit', function(e) {
@@ -51,6 +52,7 @@ function makeGrid() {
 			pxCanvas.getElementsByTagName('tr')[i].appendChild(newTD);
 		}
 	}
+	body.style.backgroundColor = pxColor.value/10;
 }
 
 // Make Pixel

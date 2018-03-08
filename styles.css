@@ -1,16 +1,13 @@
 body {
-    background-color: #ddd;
     margin: 0;
-    padding: 0;
+    background-color: #ddd;
 }
 
 header {
-    padding-top: 2em;
-    padding: 0 1em;
+    padding: 1em 0;
     display: flex;
     flex-wrap: nowrap;
-    justify-content: space-between;
-    align-items: flex-end;
+    justify-content: space-around;
     background-color: yellow;
 }
 
@@ -18,19 +15,13 @@ h1 {
     margin: 0;
     padding: 0;
     font-family: Monoton;
-    font-size: 40px;
-    color: #1b01b0;
-    weight: 100;
-    text-align: center;
-}
-
-h1.title {
+    font-size: 60px;
 }
 
 container.sizeSet {
+    margin-top: 1.5em;
     display: flex;
     flex-wrap: nowrap;
-    align-items: flex-end;
 }
 
 #sizePicker {
@@ -39,10 +30,6 @@ container.sizeSet {
     flex-direction: column;
 }
 
-.set-size{}
-
-.set-color{}
-
 h2 {
   height: 50px;
   text-align: center;
@@ -50,7 +37,7 @@ h2 {
 
 #pixelCanvas {
     border-collapse: collapse;
-    background-color: #ddd;
+    background-color: #ccc;
     cursor: crosshair;
 }
 
@@ -60,9 +47,7 @@ h2 {
 }
 
 #pixelCanvas > tr > td {
-    border: 0.1rem solid #fff;
-    background-color: #aaa;
-
+    border: 0.5px dashed #ddd;
 }
 
 input[type=number] {
@@ -72,20 +57,13 @@ input[type=number] {
 }
 
 input[type=submit] {
-    width: 13em;
-    margin: 0.5em;
-    text-align: center;
+    width: 16em;
+    margin: 1em;
 }
 
 input[type=color] {
-  margin: 5px;
-  height: 45px;
-  border-width: 0px;
-  background-color: #666;
-}
-
-.colorSet {
-  position: fixed;
-  height: 100vh;
-  background-color: #666;
+    margin-top: 1.5em;
+    width: 13em;
+    height: 40px;
+    align-self: center;
 }
