@@ -8,6 +8,7 @@ var canvasWidth = document.querySelector('#inputWidth');
 // Select Elements
 const pxCanvas = document.querySelector('#pixelCanvas');
 const body = document.querySelector('body');
+const h1 = document.querySelector('h1');
 
 // When size is submitted by the user, call makeGrid()
 document.querySelector('#sizePicker').addEventListener('submit', function(e) {
@@ -53,6 +54,7 @@ function makeGrid() {
 		}
 	}
 	body.style.paddingTop = '0';
+	h1.style.color = pxColor.value;
 }
 
 // Make Pixel
