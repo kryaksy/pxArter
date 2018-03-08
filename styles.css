@@ -1,5 +1,6 @@
 body {
 	margin: 0;
+	padding-top: 200px;
 	text-align: center;
 }
 
@@ -27,6 +28,7 @@ h2:first-of-type {
 
 table td {
 	border: 1px dotted #ccc;
+	background-color: #eee;
 }
 
 table {

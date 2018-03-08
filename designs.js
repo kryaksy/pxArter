@@ -52,6 +52,7 @@ function makeGrid() {
 			pxCanvas.getElementsByTagName('tr')[i].appendChild(newTD);
 		}
 	}
+	body.style.paddingTop = '0';
 }
 
 // Make Pixel
