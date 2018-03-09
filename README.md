@@ -17,10 +17,10 @@ Users should be able to:
 - Continuous Drawing
 - Square pixels
 - Grid disappears while drawing
+- One click draw
 
 ## Issues
 
-- One click draw
 
 ## Goals
 
