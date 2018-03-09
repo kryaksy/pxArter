@@ -15,10 +15,11 @@ const h1 = document.querySelector('h1');
 document.querySelector('#sizePicker').addEventListener('submit', function(e) {
 	e.preventDefault();
 	makeGrid();
+	body.style.paddingTop = '0';
 	drawPx();
 });
 
-// Continuous Drawing
+// Draw Pixel, Continuous Drawing
 function drawPx() {
 	let mouseIsDown = false;
 
@@ -61,8 +62,6 @@ function makeGrid() {
 		console.log('%' + load);
 	}
 	console.log('done');
-	body.style.paddingTop = '0';
-	h1.style.color = pxColor.value;
 }
 
 // Make Pixel
