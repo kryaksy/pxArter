@@ -23,25 +23,27 @@ document.querySelector('#sizePicker').addEventListener('submit', function(e) {
 function drawPx() {
 	let mouseIsDown = false;
 
-	document.querySelector('#pixelCanvas').addEventListener('mousemove', function(e) {
+	pxCanvas.addEventListener('mousemove', function(e) {
 		mouseIsDown && makePx(e);
 	});
 
-	document.querySelector('#pixelCanvas').addEventListener('click', function(e) {
+	pxCanvas.addEventListener('click', function(e) {
 		makePx(e);
 	});
 
-	document.querySelector('#pixelCanvas').addEventListener('mousedown', function() {
+	pxCanvas.addEventListener('mousedown', function() {
 		mouseIsDown = true;
 	});
 
-	document.querySelector('#pixelCanvas').addEventListener('mouseup', function() {
+	pxCanvas.addEventListener('mouseup', function() {
 		mouseIsDown = false;
 	});
 }
 
 // Make Grid
 function makeGrid() {
+	const makeGridStart = performance.now();
+
 	const N = canvasHeight.value;
 	const M = canvasWidth.value;
 	var cellSize = Math.floor(window.innerWidth / M);
@@ -61,14 +63,15 @@ function makeGrid() {
 			newTR.appendChild(newTD);
 		}
 		tBody.appendChild(newTR);
-		console.log('%' + load);
 	}
 	pxCanvas.appendChild(tBody);
-	console.log('done');
+	const makeGridEnd = performance.now();
+	var makeGridInterval = Math.floor(makeGridEnd - makeGridStart);
+	console.log(makeGridInterval + "ms");
 }
 
 // Make Pixel
 function makePx(e) {
 	e.target.style.backgroundColor = pxColor.value;
-	// e.target.style.border = "1px dotted" + pxColor.value;
+	e.target.style.border = "1px dotted" + pxColor.value;
 }
