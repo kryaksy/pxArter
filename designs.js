@@ -47,25 +47,28 @@ function makeGrid() {
 	var cellSize = Math.floor(window.innerWidth / M);
 
 	pxCanvas.innerHTML = "";
+	const tBody = document.createElement('div');
+	tBody.innerHTML = "";
 
 	for (var i = 0; i < N; i++) {
 		let newTR = document.createElement('tr');
 		let load = Math.floor(i / (N - 1) * 100);
-		pxCanvas.appendChild(newTR);
 		for (var j = 0; j < M; j++) {
 			let newTD = document.createElement('td');
 			window.td = newTD;
 			newTD.style.height = cellSize + "px";
 			newTD.style.width = cellSize + "px";
-			pxCanvas.getElementsByTagName('tr')[i].appendChild(newTD);
+			newTR.appendChild(newTD);
 		}
+		tBody.appendChild(newTR);
 		console.log('%' + load);
 	}
+	pxCanvas.appendChild(tBody);
 	console.log('done');
 }
 
 // Make Pixel
 function makePx(e) {
 	e.target.style.backgroundColor = pxColor.value;
-	e.target.style.border = "1px dotted" + pxColor.value;
+	// e.target.style.border = "1px dotted" + pxColor.value;
 }
