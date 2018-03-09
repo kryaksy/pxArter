@@ -46,12 +46,10 @@ function makeGrid() {
 
 	const N = canvasHeight.value;
 	const M = canvasWidth.value;
+	const tBody = document.createDocumentFragment();
 	var cellSize = Math.floor(window.innerWidth / M);
 
 	pxCanvas.innerHTML = "";
-	const tBody = document.createElement('div');
-	tBody.innerHTML = "";
-
 	for (var i = 0; i < N; i++) {
 		let newTR = document.createElement('tr');
 		let load = Math.floor(i / (N - 1) * 100);
