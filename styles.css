@@ -1,90 +1,90 @@
 html {
-	margin: 0;
-	background-color: #fff954;
+  margin: 0;
+  background-color: #fff954;
 }
 
 body {
-	margin: 0;
-	padding-top: 200px;
-	text-align: center;
+  margin: 0;
+  padding-top: 200px;
+  text-align: center;
 }
 
 header {
-	position: fixed;
-	width: 100vw;
-	margin: 0;
+  position: fixed;
+  width: 100vw;
+  margin: 0;
 }
 
 h1 {
-	font-family: Monoton;
-	font-size: 60px;
-	margin: 0.2em;
-	font-weight: lighter;
-	color: #1E0840;
+  font-family: Monoton;
+  font-size: 60px;
+  margin: 0.2em;
+  font-weight: lighter;
+  color: #1E0840;
 }
 
 h2 {
-	margin: 1em 0 0.25em;
+  margin: 1em 0 0.25em;
 }
 
 h2:first-of-type {
-	margin-top: 0.5em;
+  margin-top: 0.5em;
 }
 
 form {
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
 }
 
 table {
-	position: absolute;
-	top: 190px;
-	border-collapse: collapse;
-	margin: 0 auto;
-	min-height: 600px;
-	/* offset-x | offset-y | blur-radius | spread-radius | color */
-	box-shadow: 0px 0px 30px -10px #29270D;
+  position: absolute;
+  top: 190px;
+  border-collapse: collapse;
+  margin: 0 auto;
+  min-height: 600px;
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 0px 0px 30px -10px #29270D;
 }
 
 table td {
-	border: 1px dotted #1b01b0;
-	background-color: #FFFeee;
-	cursor: crosshair;
+  border: 1px dotted #1b01b0;
+  background-color: #FFFeee;
+  cursor: crosshair;
 }
 
 input {
-	background: none;
+  background: none;
 }
 
 input[type=number] {
-	background-color: #eee;
-	width: 8em;
-	height: 40px;
-	text-align: center;
+  background-color: #eee;
+  width: 8em;
+  height: 40px;
+  text-align: center;
 }
 
 input[type=submit] {
-	background-color: green;
-	color: white;
-	cursor: pointer;
-	height: 46px;
-	width: 100px;
-	margin: 0px 10px;
-	text-transform: uppercase;
+  background-color: green;
+  color: white;
+  cursor: pointer;
+  height: 46px;
+  width: 100px;
+  margin: 0px 10px;
+  text-transform: uppercase;
 }
 
 input[type=submit]:active {
-	box-shadow: inset 0px 0px 2px 1px #29270D;
+  box-shadow: inset 0px 0px 2px 1px #29270D;
 }
 
 input[type=submit]:focus {
-	border: none;
+  border: none;
 }
 
 input[type=color] {
-	border: none;
-	width: 80px;
-	height: 40px;
+  border: none;
+  width: 80px;
+  height: 40px;
 }
