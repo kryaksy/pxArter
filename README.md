@@ -21,12 +21,10 @@ Users should be able to:
 
 ## Issues
 
-
-## Goals
-
-- Continuous eraser
-- Cleaner
+- Eraser Tool
+- Cleaner Tool
 - Keyboard shortcuts
-- Brush size
+- Change brush size
 - Canvas resizing
 - Color Rules Guider
+- Drawing without space
