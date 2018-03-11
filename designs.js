@@ -55,6 +55,12 @@ function drawPx() {
 }
 
 // Make Grid
+
+///////////////////////////////setTimeout///////////////////////////////
+let countN = 0;
+let countM = 0;
+///////////////////////////////setTimeout///////////////////////////////
+
 function makeGrid() {
 
   const N = canvasHeight.value;
@@ -62,19 +68,45 @@ function makeGrid() {
   const tBody = document.createDocumentFragment();
   var cellSize = Math.floor(window.innerWidth / M);
 
-  for (var i = 0; i < N; i++) {
+  // for (var i = 0; i < N; i++) {
+  //   let newTR = document.createElement('tr');
+  //   for (var j = 0; j < M; j++) {
+  //     let newTD = document.createElement('td');
+  //     window.td = newTD;
+  //     newTD.style.height = cellSize + "px";
+  //     newTD.style.width = cellSize + "px";
+  //     newTR.appendChild(newTD);
+  //   }
+  //   tBody.appendChild(newTR);
+  // }
+  // pxCanvas.appendChild(tBody);
+
+  ///////////////////////////////setTimeout///////////////////////////////
+  newTR(tBody, cellSize);
+
+  function newTR(tBody, cellSize) {
+    countN++;
     let newTR = document.createElement('tr');
-    let load = Math.floor(i / (N - 1) * 100);
-    for (var j = 0; j < M; j++) {
+
+    newTD(newTR, cellSize);
+
+    function newTD(newTR, cellSize) {
+      countM++;
       let newTD = document.createElement('td');
       window.td = newTD;
       newTD.style.height = cellSize + "px";
       newTD.style.width = cellSize + "px";
       newTR.appendChild(newTD);
+      (countM < M) && setTimeout(newTD, 0);
+      return newTR;
     }
+
     tBody.appendChild(newTR);
+    countN < N && setTimeout(newTR, 0);
+    return tBody;
   }
-  pxCanvas.appendChild(tBody);
+  ///////////////////////////////setTimeout///////////////////////////////
+
 }
 
 // Make Pixel
