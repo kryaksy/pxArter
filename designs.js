@@ -13,13 +13,27 @@ const h1 = document.querySelector('h1');
 
 // When size is submitted by the user, call makeGrid()
 document.querySelector('#sizePicker').addEventListener('submit', function(e) {
+  const submitStart = performance.now();
   e.preventDefault();
+  const preventDef = performance.now();
+
+  pxCanvas.innerHTML = "";
+  const clearEnd = performance.now();
   makeGrid();
+  const makeGridEnd = performance.now();
   body.style.paddingTop = '0';
+  const paddingTopEnd = performance.now();
   drawPx();
+  const drawPxEnd = performance.now();
+  var preventDefInterval = Math.floor((preventDef - submitStart) * 1000);
+  var clearEndInterval = Math.floor(clearEnd - preventDef);
+  var makeGridInterval = Math.floor(makeGridEnd - clearEnd);
+  var drawPxInterval = Math.floor(drawPxEnd - makeGridEnd);
+  console.log("Prevent Default: \t" + preventDefInterval + "ms\n" + "Clear Table: \t\t" + clearEndInterval + "ms\n" + "Grid Making: \t\t" + makeGridInterval + "ms\n" + "drawPx: \t\t\t" + drawPxInterval + "ms\n");
+
 });
 
-// Draw Pixel, Continuous Drawing
+// Drawing
 function drawPx() {
   let mouseIsDown = false;
 
@@ -42,14 +56,12 @@ function drawPx() {
 
 // Make Grid
 function makeGrid() {
-  const makeGridStart = performance.now();
 
   const N = canvasHeight.value;
   const M = canvasWidth.value;
   const tBody = document.createDocumentFragment();
   var cellSize = Math.floor(window.innerWidth / M);
 
-  pxCanvas.innerHTML = "";
   for (var i = 0; i < N; i++) {
     let newTR = document.createElement('tr');
     let load = Math.floor(i / (N - 1) * 100);
@@ -63,9 +75,6 @@ function makeGrid() {
     tBody.appendChild(newTR);
   }
   pxCanvas.appendChild(tBody);
-  const makeGridEnd = performance.now();
-  var makeGridInterval = Math.floor(makeGridEnd - makeGridStart);
-  console.log(makeGridInterval + "ms");
 }
 
 // Make Pixel
