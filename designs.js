@@ -64,7 +64,6 @@ function makeGrid() {
 
   for (var i = 0; i < N; i++) {
     let newTR = document.createElement('tr');
-    let load = Math.floor(i / (N - 1) * 100);
     for (var j = 0; j < M; j++) {
       let newTD = document.createElement('td');
       window.td = newTD;
