@@ -49,7 +49,6 @@ table {
 }
 
 table td {
-  border: 1px dotted #1b01b0;
   background-color: #fffeee;
   cursor: crosshair;
 }
