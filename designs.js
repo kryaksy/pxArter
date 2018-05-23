@@ -80,5 +80,4 @@ function makeGrid() {
 // Make Pixel
 function makePx(e) {
 	e.target.style.backgroundColor = pxColor.value;
-	e.target.style.border = "1px dotted" + pxColor.value;
 }
