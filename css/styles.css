@@ -1,42 +1,42 @@
 html {
   margin: 0;
-  background-color: #fff954;
-}
+  background-color: #fff954; }
 
 body {
   margin: 0;
   padding-top: 200px;
-  text-align: center;
-}
+  text-align: center; }
 
 header {
   position: fixed;
   width: 100vw;
-  margin: 0;
-}
+  margin: 0; }
 
 h1 {
   font-family: Monoton;
   font-size: 60px;
   margin: 0.2em;
   font-weight: lighter;
-  color: #1e0840;
-}
+  color: #1e0840; }
 
 h2 {
-  margin: 1em 0 0.25em;
-}
+  margin: 1em 0 0.25em; }
 
 h2:first-of-type {
-  margin-top: 0.5em;
-}
+  margin-top: 0.5em; }
 
 form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-}
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 table {
   position: absolute;
@@ -45,24 +45,21 @@ table {
   margin: 0 auto;
   min-height: 600px;
   /* offset-x | offset-y | blur-radius | spread-radius | color */
-  box-shadow: 0px 0px 30px -10px #29270d;
-}
+  -webkit-box-shadow: 0px 0px 30px -10px #29270d;
+          box-shadow: 0px 0px 30px -10px #29270d; }
 
 table td {
   background-color: #fffeee;
-  cursor: crosshair;
-}
+  cursor: crosshair; }
 
 input {
-  background: none;
-}
+  background: none; }
 
 input[type=number] {
   background-color: #eee;
   width: 8em;
   height: 40px;
-  text-align: center;
-}
+  text-align: center; }
 
 input[type=submit] {
   background-color: green;
@@ -71,19 +68,16 @@ input[type=submit] {
   height: 46px;
   width: 100px;
   margin: 0px 10px;
-  text-transform: uppercase;
-}
+  text-transform: uppercase; }
 
 input[type=submit]:active {
-  box-shadow: inset 0px 0px 2px 1px #29270D;
-}
+  -webkit-box-shadow: inset 0px 0px 2px 1px #29270D;
+          box-shadow: inset 0px 0px 2px 1px #29270D; }
 
 input[type=submit]:focus {
-  border: none;
-}
+  border: none; }
 
 input[type=color] {
   border: none;
   width: 80px;
-  height: 40px;
-}
+  height: 40px; }
