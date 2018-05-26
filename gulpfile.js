@@ -12,20 +12,21 @@ gulp.task('default', ['styles','copy-html','copy-images'],function () {
     });
 });
 
-browserSync.stream();
-
 gulp.task('styles',function () {
 	gulp.src('sass/**/*.scss')
 		.pipe(sass().on('error',sass.logError))
 		.pipe(autoprefixer({
 			'browsers':['last 2 versions']
 		}))
-		.pipe(gulp.dest('./dist/css'));
+		.pipe(gulp.dest('./dist/css'))
+		.pipe(browserSync.stream());
 });
 
 gulp.task('copy-html',function () {
     gulp.src('./index.html')
-        .pipe(gulp.dest('./dist'));
+        .pipe(gulp.dest('./dist'))
+        .pipe(browserSync.stream());
+
 });
 
 gulp.task('copy-images',function () {
