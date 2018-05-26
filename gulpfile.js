@@ -4,7 +4,8 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     browserSync = require('browser-sync').create(),
     eslint = require('gulp-eslint'),
-    concat = require('gulp-concat');
+    concat = require('gulp-concat'),
+    uglify = require('gulp-uglify');
 
 gulp.task('default', ['styles','lint'], function () {
     gulp.watch('sass/**/*.scss',['styles']);
@@ -65,5 +66,6 @@ gulp.task('scripts', function () {
 gulp.task('scripts-dist', function () {
     gulp.src('js/**/*js')
         .pipe(concat('all.js'))
+        .pipe(uglify())
         .pipe(gulp.dest('dist/js'))
 })
