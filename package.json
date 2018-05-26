@@ -328,6 +328,7 @@
       "resolved": "https://registry.npmjs.org/axios/-/axios-0.17.1.tgz",
       "version": "0.17.1"
     },
+    "babel-core": "^6.26.3",
     "backo2": {
       "integrity": "sha1-MasayLEpNjRj41s+u2n038+6eUc=",
       "resolved": "https://registry.npmjs.org/backo2/-/backo2-1.0.2.tgz",

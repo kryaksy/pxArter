@@ -12,7 +12,7 @@ const header = document.querySelector('header');
 const h1 = document.querySelector('h1');
 
 // When size is submitted by the user, call makeGrid()
-document.querySelector('#sizePicker').addEventListener('submit', function(e) {
+document.querySelector('#sizePicker').addEventListener('submit', function (e) {
 	const submitStart = performance.now();
 	e.preventDefault();
 	const preventDef = performance.now();
@@ -30,26 +30,25 @@ document.querySelector('#sizePicker').addEventListener('submit', function(e) {
 	var makeGridInterval = Math.floor(makeGridEnd - clearEnd);
 	var drawPxInterval = Math.floor(drawPxEnd - makeGridEnd);
 	console.log("Prevent Default: \t" + preventDefInterval + "ms\n" + "Clear Table: \t\t" + clearEndInterval + "ms\n" + "Grid Making: \t\t" + makeGridInterval + "ms\n" + "drawPx: \t\t\t" + drawPxInterval + "ms\n");
-
 });
 
 // Drawing
 function drawPx() {
 	let mouseIsDown = false;
 
-	pxCanvas.addEventListener('mousemove', function(e) {
+	pxCanvas.addEventListener('mousemove', function (e) {
 		mouseIsDown && makePx(e);
 	});
 
-	pxCanvas.addEventListener('click', function(e) {
+	pxCanvas.addEventListener('click', function (e) {
 		makePx(e);
 	});
 
-	pxCanvas.addEventListener('mousedown', function() {
+	pxCanvas.addEventListener('mousedown', function () {
 		mouseIsDown = true;
 	});
 
-	pxCanvas.addEventListener('mouseup', function() {
+	pxCanvas.addEventListener('mouseup', function () {
 		mouseIsDown = false;
 	});
 }
