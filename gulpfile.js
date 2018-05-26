@@ -6,6 +6,7 @@ var browserSync = require('browser-sync').create();
 gulp.task('default', ['styles','copy-html','copy-images'],function () {
 	gulp.watch('sass/**/*.scss',['styles']);
     gulp.watch('./index.html',['copy-html']);
+    gulp.watch('./dist/index.html').on('change', browserSync.reload);
 
     browserSync.init({
          server: "./dist"
@@ -24,9 +25,7 @@ gulp.task('styles',function () {
 
 gulp.task('copy-html',function () {
     gulp.src('./index.html')
-        .pipe(gulp.dest('./dist'))
-        .pipe(browserSync.stream());
-
+        .pipe(gulp.dest('./dist'));
 });
 
 gulp.task('copy-images',function () {
