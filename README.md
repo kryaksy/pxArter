@@ -28,3 +28,12 @@ Users should be able to:
 - Canvas resizing
 - Color Rules Guider
 - Drawing without space
+
+## Tech Used
+- HTML5 / TABLE
+- CSS3
+- Javascript
+- Sublime Text 3
+- Shell
+- Gulp
+- Gitkraken
