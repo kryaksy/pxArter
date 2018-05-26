@@ -4,7 +4,8 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     browserSync = require('browser-sync').create(),
     eslint = require('gulp-eslint'),
-    concat = require('gulp-concat');
+    concat = require('gulp-concat'),
+    babel = require('gulp-babel');
 
 gulp.task('default', ['styles','lint'], function () {
     gulp.watch('sass/**/*.scss',['styles']);
@@ -58,12 +59,14 @@ gulp.task('copy-images',function () {
 
 gulp.task('scripts', function () {
     gulp.src('js/**/*js')
+        .pipe(babel())
         .pipe(concat('all.js'))
         .pipe(gulp.dest('dist/js'))
 })
 
 gulp.task('scripts-dist', function () {
     gulp.src('js/**/*js')
+        .pipe(babel())
         .pipe(concat('all.js'))
         .pipe(gulp.dest('dist/js'))
 })
