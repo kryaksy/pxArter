@@ -15,7 +15,7 @@ gulp.task('default', ['styles','copy-html','copy-images'],function () {
 
 gulp.task('styles',function () {
 	gulp.src('sass/**/*.scss')
-		.pipe(sass().on('error',sass.logError))
+		.pipe(sass({outputStyle: 'compressed'}).on('error',sass.logError))
 		.pipe(autoprefixer({
 			'browsers':['last 2 versions']
 		}))
